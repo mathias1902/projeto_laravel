@@ -12,7 +12,7 @@ Framework --> Laravel
 	2) Entrar na pasta onde deseja-se criar o projeto cd ...
 	
 	3) Executar o comando:
-		3.1) composer create-project --prefer-dist laravel/laravel (NOME_DO_PROJETO)
+		3.1) composer create-project --prefer-dist laravel/laravel (NOME_DO_PROJETO) ("VERSÃO")
 
 |-----------------------------------------------------------------------------------------------------------|
 
