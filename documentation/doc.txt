@@ -1,0 +1,33 @@
+|---------------------------------------------------------|
+<-------------- GUIA AMBIENTE LARAVEL + PHP -------------->
+
+Framework --> Laravel
+
+|---------------------------------------------------------|
+
+--> Como criar um projeto novo
+
+	1) Executar o cmd;
+
+	2) Entrar na pasta onde deseja-se criar o projeto cd ...
+	
+	3) Executar o comando:
+		3.1) composer create-project --prefer-dist laravel/laravel (NOME_DO_PROJETO)
+
+|---------------------------------------------------------|
+
+--> Como iniciar o servidor:
+
+	1) Executar o cmd;
+
+	2) Executar: php -S localhost:8000;
+
+	Obs.: o comando citado deve ser executado dentro da pasta public do laravel
+
+	--> Via Terminal (artisan)
+
+	1) Executar na raíz do projeto: php artisan serve
+
+	2) O comando irá executar em porta padrão (8000)
+
+|---------------------------------------------------------|
