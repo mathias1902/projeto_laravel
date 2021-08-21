@@ -21,21 +21,14 @@ Route::get('/contato', 'ContatoController@contato');
 // nome, categoria, assunto, mensagem
 
 Route::get(
-    '/contato/{nome?}/{categoria?}/{assunto?}/{mensagem?}',
+    '/contato/{nome}/{categoria_id}', //
     function(
-            string $nome = 'Teste',
-            string $categoria = 'Informação',
-            string $assunto = 'Contato',
-            string $mensagem = 'mensagem não informada') {
-        /* 
-            Escrito com aspas simples, precisa concatenar.
-            echo 'Estamos aqui: '.$nome.' - '.$categoria.' - '.$assunto.' - '.$mensagem; 
-        */
-
-        // Exemplo com aspas duplas.
-        echo "Estamos aqui: $nome - $categoria - $assunto - $mensagem";
+        string $nome = 'Desconhecido',
+        int $categoria_id = 1 // 1 - 'Informação'
+    ) {
+        echo "Estamos aqui: $nome - $categoria_id";
     }
-);
+)->where('categoria_id', '[0-9]+')->where('nome', '[A-Za-z]+');
 
 /* Verbos para controlar as requisições feitas para o servidor:
 
