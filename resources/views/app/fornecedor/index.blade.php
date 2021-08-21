@@ -15,24 +15,14 @@
 @endphp
 
 @isset($fornecedores)
-    Fornecedor: {{ $fornecedores[0]['nome'] }}
-    <br />
-    Status: {{ $fornecedores[0]['status'] }}
-    <br />
-    CNPJ: {{ $fornecedores[0]['cnpj'] ?? '' }}
-    <br />
-    Telefone: ({{ $fornecedores[0]['ddd'] ?? '' }}) {{ $fornecedores[0]['telefone'] ?? '' }}
-    @switch($fornecedores[0]['ddd'])
-        @case ('11')
-            São Paulo - SP
-            @break
-        @case ('41')
-            Curitiba - PR
-            @break
-        @case ('85')
-            Fortaleza - CE
-            @break
-        @default
-            Estado não identificado
-    @endswitch
+    @for($i = 0; isset($fornecedores[$i]); $i++)
+        Fornecedor: {{ $fornecedores[$i]['nome'] }}
+        <br />
+        Status: {{ $fornecedores[$i]['status'] }}
+        <br />
+        CNPJ: {{ $fornecedores[$i]['cnpj'] ?? '' }}
+        <br />
+        Telefone: ({{ $fornecedores[$i]['ddd'] ?? '' }}) {{ $fornecedores[$i]['telefone'] ?? '' }}
+        <hr />
+    @endfor
 @endisset
