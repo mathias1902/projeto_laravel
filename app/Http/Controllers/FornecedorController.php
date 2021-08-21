@@ -11,7 +11,7 @@ class FornecedorController extends Controller
             0 => [
                 'nome' => 'Fornecedor 1',
                 'status' => 'N',
-                'cnpj' => '0.0'
+                'cnpj' => '00'
             ],
             1 => [
                 'nome' => 'Fornecedor 2',
@@ -19,7 +19,13 @@ class FornecedorController extends Controller
             ]
         ];
 
+        /*
+            condicao ? se verdadeiro : se falso; // operador ternário
+            condicao ? se verdadeiro : (condicao ? se verdadeiro : se falso); // ternário com encadeamento
+        */
+        $msg = isset($fornecedores[0]['cnpj']) ? 'CNPJ informado' : 'CNPJ não informado';
+        echo $msg;
+
         return view('app.fornecedor.index', compact('fornecedores'));
-        // return view('app.fornecedor.index');
     }
 }
