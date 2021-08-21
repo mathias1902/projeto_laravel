@@ -14,7 +14,6 @@
     */
 @endphp
 
-{{- teste -}}
 @isset($fornecedores)
     @forelse($fornecedores as $indice => $fornecedor)
         Fornecedor: {{ $fornecedor['nome'] }}
