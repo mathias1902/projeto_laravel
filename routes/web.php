@@ -13,31 +13,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// return view('welcome');
+/*
+Route::get('/', function () {
+    return 'Olá, seja bem vindo ao curso!';
+});
+*/
 
 Route::get('/', 'PrincipalController@principal');
+
 Route::get('/sobre-nos', 'SobreNosController@sobreNos');
+
 Route::get('/contato', 'ContatoController@contato');
-// nome, categoria, assunto, mensagem
 
-Route::get(
-    '/contato/{nome}/{categoria_id}', //
-    function(
-        string $nome = 'Desconhecido',
-        int $categoria_id = 1 // 1 - 'Informação'
-    ) {
-        echo "Estamos aqui: $nome - $categoria_id";
+Route::get('/login',
+    function(){
+        return 'Login';
     }
-)->where('categoria_id', '[0-9]+')->where('nome', '[A-Za-z]+');
-
-/* Verbos para controlar as requisições feitas para o servidor:
-
-    http
-    get
-    post
-    put
-    patch
-    delete
-    options
-
-*/
+);
+Route::get('/clientes',
+    function(){
+        return 'Clientes';
+    }
+);
+Route::get('/fornecedores',
+    function(){
+        return 'Fornecedores';
+    }
+);
+Route::get('/produtos',
+    function(){
+        return 'Produtos';
+    }
+);
