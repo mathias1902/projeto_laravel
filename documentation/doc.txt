@@ -31,3 +31,7 @@ Framework --> Laravel
 	2) O comando irá executar em porta padrão (8000)
 
 |-----------------------------------------------------------------------------------------------------------|
+
+--> Seeders
+
+	Contém instruções para semear o banco de dados;
