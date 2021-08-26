@@ -39,3 +39,13 @@ Framework --> Laravel
 		--> php artisan db:seed --class SiteContatoSeeder
 
 |-----------------------------------------------------------------------------------------------------------|
+
+--> Request
+
+	- Para recuperar um campo unico do request
+		$request->input('NOME_DO_CAMPO');
+	
+	- Para recuperar todos do request
+		$request->all();
+
+|-----------------------------------------------------------------------------------------------------------|
