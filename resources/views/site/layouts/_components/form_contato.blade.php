@@ -18,3 +18,9 @@
     <br>
     <button type="submit" class="{{ $classe }}">ENVIAR</button>
 </form>
+
+<div style="position:absolute; right:0px; top:0px;  width:100%; background:red;">
+    <pre>
+        {{print_r($errors)}}
+    </pre>
+</div
