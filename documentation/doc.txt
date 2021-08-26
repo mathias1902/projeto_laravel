@@ -35,3 +35,7 @@ Framework --> Laravel
 --> Seeders
 
 	Contém instruções para semear o banco de dados;
+	--> Comando para semer utilizando uma seeder criada
+		--> php artisan db:seed --class SiteContatoSeeder
+
+|-----------------------------------------------------------------------------------------------------------|
