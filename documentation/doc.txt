@@ -49,3 +49,18 @@ Framework --> Laravel
 		$request->all();
 
 |-----------------------------------------------------------------------------------------------------------|
+
+--> Versões
+
+	- PHP
+		PHP 7.4.22 (cli) (built: Jul 28 2021 09:44:30) ( ZTS Visual C++ 2017 x64 )
+		Copyright (c) The PHP Group
+		Zend Engine v3.4.0, Copyright (c) Zend Technologies
+	
+	- Composer
+		Composer version 2.1.5 2021-07-23 10:35:47
+
+	- Laravel
+		Laravel Framework 7.30.4
+
+|-----------------------------------------------------------------------------------------------------------|
