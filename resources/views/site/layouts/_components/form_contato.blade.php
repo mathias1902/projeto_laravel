@@ -26,6 +26,7 @@
     <button type="submit" class="{{ $classe }}">ENVIAR</button>
 </form>
 
+{{--
 @if ($errors->any())
     <div style="position:absolute; right:0px; top:0px;  width:100%; background:red;">
         @foreach ( $errors->all() as $erro)
@@ -34,3 +35,4 @@
         @endforeach
     </div>
 @endif
+--}}
