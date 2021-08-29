@@ -10,7 +10,23 @@ class LoginController extends Controller
         return view('site.login', ['titulo' => 'Login']);
     }
 
-    public function autenticar() {
-        return 'Chegamos até aqui!';
+    public function autenticar(Request $request) {
+        // Regras de validação
+        $regras = [
+            'usuario' => 'required|email',
+            'senha' => 'required'
+        ];
+
+        // As mensagens de feedback de validação
+        $feedback = [
+            'usuario.required' => 'O campo usuário (email) é obrigatório.',
+            'usuario.email' => 'O usuário informado não está de acordo, tente novamente.',
+            'senha.required' => 'O campo senha é obrigatório.'
+        ];
+
+        // Se não passar pelo validate é feito redirect para a rota antiga
+        $request->validate($regras, $feedback);
+
+        print_r($request->all());
     }
 }
