@@ -18,7 +18,10 @@ Route::get('/', 'PrincipalController@principal')->name('site.index')->middleware
 Route::get('/sobre-nos', 'SobreNosController@sobreNos')->name('site.sobrenos');
 Route::get('/contato', 'ContatoController@contato')->name('site.contato');
 Route::post('/contato', 'ContatoController@salvar')->name('site.contato');
-Route::get('/login', function(){ return 'Login'; })->name('site.login');
+
+// Rotas de Login
+Route::get('/login', 'LoginController@index')->name('site.login');
+Route::post('/login', 'LoginController@autenticar')->name('site.login');
 
 // Agrupamento --> /app
 Route::middleware('autenticacao:ldap,visitante')->prefix('/app')->group(function() {
