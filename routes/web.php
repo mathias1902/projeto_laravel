@@ -24,10 +24,10 @@ Route::get('/login/{erro?}', 'LoginController@index')->name('site.login');
 Route::post('/login', 'LoginController@autenticar')->name('site.login');
 
 // Agrupamento --> /app
-Route::middleware('autenticacao:ldap,visitante')->prefix('/app')->group(function() {
-    Route::get('/clientes', function(){ return 'Clientes'; })->name('site.clientes');
-    Route::get('/fornecedores', 'FornecedorController@index')->name('site.fornecedores');
-    Route::get('/produtos', function(){ return 'Produtos'; })->name('site.produtos');
+Route::middleware('autenticacao:padrao,visitante')->prefix('/app')->group(function() {
+    Route::get('/clientes', function(){ return 'Clientes'; })->name('app.clientes');
+    Route::get('/fornecedores', 'FornecedorController@index')->name('app.fornecedores');
+    Route::get('/produtos', function(){ return 'Produtos'; })->name('app.produtos');
 });
 
 Route::get('/teste/{p1}/{p2}', 'TesteController@teste')->name('teste');
